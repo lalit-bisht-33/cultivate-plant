@@ -1,1 +1,26 @@
-plants: Array to store the IDs of plants associated with the user (e.g., their selected plants).
+import mongoose from "mongoose";
+
+const UserSchema= new mongoose.Schema({
+name:{
+    type:String,
+    required:true,
+},
+email:{
+    type:String,
+    unique:true,    
+    required:true,
+},
+password:{
+    type:String,
+    required:true,
+},
+plants:[
+    {
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Plant"
+    }
+]
+},{timestamps:true})
+
+const User = mongoose.model("User",UserSchema);
+export default User;
