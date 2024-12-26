@@ -1,0 +1,1 @@
+plants: Array to store the IDs of plants associated with the user (e.g., their selected plants).
