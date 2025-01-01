@@ -10,7 +10,6 @@ router.post("/logout",logout);
 router.get("/profile/:id",protectRoute,getUserProfile);
 router.post("/update",protectRoute,updateUserProfile);
 router.delete("/delete",protectRoute,deleteUserProfile);
-router.delete("/delete",protectRoute,deleteUserProfile);
 
 
 export default router;

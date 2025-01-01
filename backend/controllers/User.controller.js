@@ -210,8 +210,8 @@ export const logout = (req, res) => {
     try {
         res.clearCookie("jwt", {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production", // Secure flag only in production
-            sameSite: "strict", // CSRF protection
+            secure: process.env.NODE_ENV === "production", 
+            sameSite: "strict",
         });
 
         res.status(200).json({ message: "Logged out successfully." });
@@ -220,3 +220,5 @@ export const logout = (req, res) => {
         res.status(500).json({ error: "Internal Server Error!!" });
     }
 };
+
+
