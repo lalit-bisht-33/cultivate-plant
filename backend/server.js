@@ -4,6 +4,7 @@ import cors from "cors"
 import {connectDB} from "./config/db.js"
 import UserRoute from "./routes/User.route.js"
 import PlantRoute from "./controllers/Plant.controller.js"
+import ReminderRoute from "./controllers/Reminder.controller.js"
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(cookieParser());
 //Routes Handle
 app.use('/api/user', UserRoute);
 app.use('/api/plant',PlantRoute);
+app.use('/api/reminder',ReminderRoute);
 
 
 //listen to port 
